@@ -16,7 +16,7 @@ st.write("This app automatically extracts 50 years of data from Kaggle and build
 with st.spinner("Downloading and processing data from Kaggle..."):
     try:
         df = load_gold_data()
-        st.success("Dataset successfully synchronized!")
+        
     except Exception as e:
         st.error(f"Error initializing data: {e}")
         st.stop()
