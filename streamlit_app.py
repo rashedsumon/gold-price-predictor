@@ -31,10 +31,7 @@ model, metrics = train_forecaster(X, y)
 
 
 
-# 4. Interactive Plotly Visualization
-st.subheader("Historical Timeline of Gold Prices")
-fig = px.line(df, x='Date', y='Value', labels={'Value': 'Price (USD)', 'Date': 'Year'}, title="Gold Price Trend (1970 - 2020)")
-st.plotly_chart(fig, use_container_width=True)
+
 
 # 5. Live Prediction Interface
 st.markdown("---")
