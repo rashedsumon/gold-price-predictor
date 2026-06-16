@@ -9,7 +9,7 @@ from model import prepare_time_series_features, train_forecaster
 # Configure page layout
 st.set_page_config(page_title="Gold Price Forecasting AI", layout="wide")
 
-
+st.title("💰 Gold Price Forecasting AI")
 st.write("This app automatically extracts 50 years of data from Kaggle and builds a supervised ML forecaster.")
 
 # 1. Load Data
