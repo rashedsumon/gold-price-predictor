@@ -33,10 +33,6 @@ model, metrics = train_forecaster(X, y)
 
 
 
-# 5. Live Prediction Interface
-st.markdown("---")
-st.subheader("🔮 Run Live AI Forecast")
-st.write(f"Based on the last {lag_days} days of recorded data, here is the predicted market open price for the next trading cycle:")
 
 # Grab the most recent row values to feed as prediction features
 latest_lags = df['Value'].iloc[-lag_days:].values[::-1].reshape(1, -1)
