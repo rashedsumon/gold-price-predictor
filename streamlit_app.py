@@ -29,14 +29,7 @@ lag_days = st.sidebar.slider("Historical Memory Lag (Days)", min_value=3, max_va
 X, y, df_features = prepare_time_series_features(df, lag_days=lag_days)
 model, metrics = train_forecaster(X, y)
 
-# 3. Main Interface KPI Cards
-kpi1, kpi2, kpi3 = st.columns(3)
-with kpi1:
-    st.metric("Latest Historic Price", f"${df['Value'].iloc[-1]:,.2f}", f"As of {df['Date'].iloc[-1].strftime('%Y-%m-%d')}")
-with kpi2:
-    st.metric("Model Prediction Error (MAE)", f"${metrics['MAE']:.2f}")
-with kpi3:
-    st.metric("Model Confidence ($R^2$)", f"{metrics['R2']*100:.1f}%")
+
 
 # 4. Interactive Plotly Visualization
 st.subheader("Historical Timeline of Gold Prices")
