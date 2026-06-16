@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Streamlit local settings
+.streamlit/
+
+# Downloaded Kaggle dataset artifacts
+~/.kaggle/
+.kagglehub/
