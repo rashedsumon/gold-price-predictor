@@ -42,7 +42,8 @@ st.write(f"Based on the last {lag_days} days of recorded data, here is the predi
 latest_lags = df['Value'].iloc[-lag_days:].values[::-1].reshape(1, -1)
 predicted_price = model.predict(latest_lags)[0]
 
-
+# Display Result Card
+st.info(f"### **Predicted Gold Price:** `${predicted_price:,.2f}`")
 
 # Raw Data Inspect tools
 if st.checkbox("Show Raw Dataset Snippet"):
