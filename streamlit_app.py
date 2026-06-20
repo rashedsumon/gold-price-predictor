@@ -7,7 +7,7 @@ from model import prepare_time_series_features, train_forecaster
 # Configure page layout
 st.set_page_config(page_title="Gold Price Predictor", layout="centered")
 
-st.title("💰 Gold Price Prediction AI")
+st.title("💰 Gold Price Prediction")
 st.write("Adjust your parameters below and trigger the AI model to calculate the next market price prediction.")
 
 # Automatically handle data pipeline setup behind the scenes
@@ -75,4 +75,4 @@ if st.button("🔮 Predict Next Price", type="primary"):
         
     st.info(f"💡 *Note: This prediction is generated using data up to the latest dataset milestone ({df['Date'].iloc[-1].strftime('%Y-%m-%d')}).*")
 else:
-    st.info("👈 Click the button above to view the calculation output.")
+    
