@@ -74,5 +74,8 @@ if st.button("🔮 Predict Next Price", type="primary"):
         )
         
     st.info(f"💡 *Note: This prediction is generated using data up to the latest dataset milestone ({df['Date'].iloc[-1].strftime('%Y-%m-%d')}).*")
-else:
     
+    
+    
+    
+
